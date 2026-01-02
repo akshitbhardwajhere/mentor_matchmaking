@@ -1,0 +1,461 @@
+{
+ "actions": [],
+ "autoname": "format:BD-STDNT-{MM}-{###}",
+ "creation": "2025-12-20 17:35:03.565830",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "full_name",
+  "phone_number",
+  "state",
+  "city",
+  "district",
+  "column_break_xvta",
+  "email",
+  "college_name",
+  "current_year",
+  "profile_picture",
+  "skills_and_interests_section",
+  "current_skill_level",
+  "skills",
+  "web_development_pythondjango",
+  "web_development_jsnodereact",
+  "frappeerpnext",
+  "devops__cloud_aws",
+  "data__ml",
+  "open_source_contribution",
+  "career_guidance__resume__interviews",
+  "other_specify_below",
+  "other_skills",
+  "column_break_demt",
+  "interests",
+  "learn_to_build_real_projects",
+  "learn_open_source__contribute_to_foss",
+  "get_internship_ready",
+  "resume__linkedin__interview_prep",
+  "career_guidance_what_path_to_choose",
+  "public_speaking__community_work",
+  "other_interests",
+  "other_interests_data",
+  "links_section",
+  "github_profile",
+  "portfolio__resume",
+  "linkedin_profile",
+  "availability_section",
+  "available_hours_per_week",
+  "preferred_days",
+  "weekdays_evenings",
+  "saturdays",
+  "sundays",
+  "flexible",
+  "column_break_srui",
+  "mentoring_duration",
+  "preferred_mode",
+  "online_video",
+  "online_async__chat",
+  "offline_if_mentor_is_nearby",
+  "program_expectations_section",
+  "what_do_you_want",
+  "past_projects",
+  "column_break_vxzl",
+  "languages_spoken",
+  "hindi",
+  "english",
+  "maithili",
+  "bhojpuri",
+  "other",
+  "other_languages"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "placeholder": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile_picture",
+   "fieldtype": "Attach Image",
+   "label": "Profile Picture"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "placeholder": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "placeholder": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "default": "Bihar",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "college_name",
+   "fieldtype": "Data",
+   "label": "College Name"
+  },
+  {
+   "fieldname": "current_year",
+   "fieldtype": "Select",
+   "label": "Current Year",
+   "options": "Choose an option\nSchool (9-12)\n1st Year\n2nd Year\n3rd Year\n4th Year\nGraduate / Working",
+   "placeholder": "Choose an option"
+  },
+  {
+   "fieldname": "column_break_xvta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "skills_and_interests_section",
+   "fieldtype": "Section Break",
+   "label": "Skills and Interests"
+  },
+  {
+   "fieldname": "current_skill_level",
+   "fieldtype": "Select",
+   "label": "Current Skill Level",
+   "options": "Choose an option\nBeginner (just starting)\nIntermediate (built small projects)\nAdvanced (confident with real-world tasks)",
+   "placeholder": "Choose an option",
+   "reqd": 1
+  },
+  {
+   "fieldname": "interests",
+   "fieldtype": "HTML",
+   "label": "Interests",
+   "options": "<h5>Interests</h5>"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "HTML",
+   "label": "Skills",
+   "options": "<h5>Skills</h5>"
+  },
+  {
+   "depends_on": "eval:doc.other_specify_below == \"1\"",
+   "fieldname": "other_skills",
+   "fieldtype": "Data",
+   "label": "Other Skills"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Links"
+  },
+  {
+   "fieldname": "github_profile",
+   "fieldtype": "Data",
+   "label": "Github Profile",
+   "placeholder": "URL"
+  },
+  {
+   "fieldname": "portfolio__resume",
+   "fieldtype": "Data",
+   "label": "Portfolio / Resume",
+   "placeholder": "URL"
+  },
+  {
+   "fieldname": "linkedin_profile",
+   "fieldtype": "Data",
+   "label": "Linkedin Profile",
+   "placeholder": "URL"
+  },
+  {
+   "fieldname": "availability_section",
+   "fieldtype": "Section Break",
+   "label": "Availability"
+  },
+  {
+   "fieldname": "available_hours_per_week",
+   "fieldtype": "Int",
+   "label": "How many hours per week can you spend on mentoring sessions + work?",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "mentoring_duration",
+   "fieldtype": "Select",
+   "label": "Mentoring Duration",
+   "options": "Choose an option\n1 month\n2 month\n3-6 months",
+   "placeholder": "Choose an option",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_srui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_days",
+   "fieldtype": "HTML",
+   "label": "Preferred Days",
+   "options": "<h5>Preferred Days</h5>"
+  },
+  {
+   "fieldname": "preferred_mode",
+   "fieldtype": "HTML",
+   "label": "Preferred Mode"
+  },
+  {
+   "fieldname": "program_expectations_section",
+   "fieldtype": "Section Break",
+   "label": "Program Expectations"
+  },
+  {
+   "fieldname": "what_do_you_want",
+   "fieldtype": "Small Text",
+   "label": "What do you want from a mentor?",
+   "placeholder": "Example: guidance for open\u2011source contributions, support for first internship, project selection, etc.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "past_projects",
+   "fieldtype": "Small Text",
+   "label": "Share any projects you\u2019ve done (links or short description).\u201d"
+  },
+  {
+   "fieldname": "languages_spoken",
+   "fieldtype": "HTML",
+   "label": "Languages Spoken",
+   "options": "<h5>Languages Spoken</h5>"
+  },
+  {
+   "depends_on": "eval:doc.other == \"1\"",
+   "fieldname": "other_languages",
+   "fieldtype": "Data",
+   "label": "Other Languages"
+  },
+  {
+   "fieldname": "column_break_vxzl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "web_development_pythondjango",
+   "fieldtype": "Check",
+   "label": "Web Development (Python/Django)"
+  },
+  {
+   "default": "0",
+   "fieldname": "web_development_jsnodereact",
+   "fieldtype": "Check",
+   "label": "Web Development (JS/Node/React)"
+  },
+  {
+   "default": "0",
+   "fieldname": "frappeerpnext",
+   "fieldtype": "Check",
+   "label": "Frappe/ERPNext"
+  },
+  {
+   "default": "0",
+   "fieldname": "devops__cloud_aws",
+   "fieldtype": "Check",
+   "label": "DevOps / Cloud (AWS)"
+  },
+  {
+   "default": "0",
+   "fieldname": "data__ml",
+   "fieldtype": "Check",
+   "label": "Data / ML"
+  },
+  {
+   "default": "0",
+   "fieldname": "open_source_contribution",
+   "fieldtype": "Check",
+   "label": "Open Source Contribution"
+  },
+  {
+   "default": "0",
+   "fieldname": "career_guidance__resume__interviews",
+   "fieldtype": "Check",
+   "label": "Career Guidance / Resume / Interviews"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_specify_below",
+   "fieldtype": "Check",
+   "label": "Other (specify below)"
+  },
+  {
+   "default": "0",
+   "fieldname": "learn_to_build_real_projects",
+   "fieldtype": "Check",
+   "label": "Learn to build real projects"
+  },
+  {
+   "default": "0",
+   "fieldname": "learn_open_source__contribute_to_foss",
+   "fieldtype": "Check",
+   "label": "Learn open source / contribute to FOSS"
+  },
+  {
+   "default": "0",
+   "fieldname": "get_internship_ready",
+   "fieldtype": "Check",
+   "label": "Get internship ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "resume__linkedin__interview_prep",
+   "fieldtype": "Check",
+   "label": "Resume / LinkedIn / Interview prep"
+  },
+  {
+   "default": "0",
+   "fieldname": "career_guidance_what_path_to_choose",
+   "fieldtype": "Check",
+   "label": "Career guidance (what path to choose)"
+  },
+  {
+   "default": "0",
+   "fieldname": "public_speaking__community_work",
+   "fieldtype": "Check",
+   "label": "Public speaking / community work"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_interests",
+   "fieldtype": "Check",
+   "label": "Other (specify below)"
+  },
+  {
+   "default": "0",
+   "fieldname": "weekdays_evenings",
+   "fieldtype": "Check",
+   "label": "Weekdays (evenings)"
+  },
+  {
+   "default": "0",
+   "fieldname": "saturdays",
+   "fieldtype": "Check",
+   "label": "Saturdays"
+  },
+  {
+   "default": "0",
+   "fieldname": "sundays",
+   "fieldtype": "Check",
+   "label": "Sundays"
+  },
+  {
+   "default": "0",
+   "fieldname": "flexible",
+   "fieldtype": "Check",
+   "label": "Flexible"
+  },
+  {
+   "default": "0",
+   "fieldname": "online_video",
+   "fieldtype": "Check",
+   "label": "Online (video)"
+  },
+  {
+   "default": "0",
+   "fieldname": "online_async__chat",
+   "fieldtype": "Check",
+   "label": "Online (async / chat)"
+  },
+  {
+   "default": "0",
+   "fieldname": "offline_if_mentor_is_nearby",
+   "fieldtype": "Check",
+   "label": "Offline (if mentor is nearby)"
+  },
+  {
+   "default": "0",
+   "fieldname": "hindi",
+   "fieldtype": "Check",
+   "label": "Hindi"
+  },
+  {
+   "default": "0",
+   "fieldname": "english",
+   "fieldtype": "Check",
+   "label": "English"
+  },
+  {
+   "default": "0",
+   "fieldname": "maithili",
+   "fieldtype": "Check",
+   "label": "Maithili"
+  },
+  {
+   "default": "0",
+   "fieldname": "bhojpuri",
+   "fieldtype": "Check",
+   "label": "Bhojpuri"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "depends_on": "eval:doc.other_interests == \"1\"",
+   "fieldname": "other_interests_data",
+   "fieldtype": "Data",
+   "label": "Other Interests"
+  },
+  {
+   "fieldname": "column_break_demt",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-30 10:09:29.441394",
+ "modified_by": "Administrator",
+ "module": "Bodhya Mentor Matchmaking",
+ "name": "Bodhya Students",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

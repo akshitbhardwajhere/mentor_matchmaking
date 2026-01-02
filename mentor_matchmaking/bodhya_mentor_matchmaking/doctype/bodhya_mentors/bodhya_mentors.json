@@ -1,0 +1,413 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:BD-MNTR-{MM}-{###}",
+ "creation": "2025-12-18 16:40:02.539703",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "full_name",
+  "phone",
+  "company",
+  "country",
+  "column_break_odeq",
+  "email",
+  "city",
+  "job_title",
+  "profile_photo",
+  "professional_profile_section",
+  "primary_skills",
+  "web_development_pythondjango",
+  "web_development_jsnodereact",
+  "frappeerpnext",
+  "devops__cloud_aws",
+  "data__ml",
+  "open_source_contribution",
+  "career_guidance__resume__interviews",
+  "other_specify_below",
+  "other_skills",
+  "column_break_xfkn",
+  "years_of_experience_in_tech",
+  "github_profile",
+  "linkedin_profile",
+  "availability_and_capacity_section",
+  "hours_per_month",
+  "mentoring_duration",
+  "preferred_mode",
+  "online_video",
+  "online_async__chat",
+  "in_person",
+  "column_break_swfb",
+  "max_students",
+  "preferred_days",
+  "weekdays_evenings",
+  "saturdays",
+  "sundays",
+  "flexible",
+  "travel_and_costs_section",
+  "open_to_travel",
+  "column_break_opej",
+  "can_self_fund_travel",
+  "travel_notes",
+  "program_alignment_section",
+  "program_alignment_column",
+  "languages_spoken",
+  "hindi",
+  "english",
+  "maithili",
+  "bhojpuri",
+  "other",
+  "other_languages",
+  "why_mentor"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "placeholder": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "placeholder": "Phone Number"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "default": "India",
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "column_break_odeq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "placeholder": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "professional_profile_section",
+   "fieldtype": "Section Break",
+   "label": "Professional Profile"
+  },
+  {
+   "depends_on": "eval:doc.other_specify_below == \"1\"",
+   "fieldname": "other_skills",
+   "fieldtype": "Small Text",
+   "label": "Other Skills"
+  },
+  {
+   "fieldname": "years_of_experience_in_tech",
+   "fieldtype": "Int",
+   "label": "Years of experience in tech"
+  },
+  {
+   "fieldname": "column_break_xfkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "availability_and_capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Availability and Capacity"
+  },
+  {
+   "fieldname": "mentoring_duration",
+   "fieldtype": "Select",
+   "label": "Mentoring Duration",
+   "options": "1 month\n2 months\n3-6 months\nOpen-ended / Depends",
+   "placeholder": "Choose an option",
+   "reqd": 1
+  },
+  {
+   "fieldname": "preferred_days",
+   "fieldtype": "HTML",
+   "label": "Preferred Days",
+   "options": "<h5>Preferred Days</h5>"
+  },
+  {
+   "fieldname": "preferred_mode",
+   "fieldtype": "HTML",
+   "label": "Preferred Mode",
+   "options": "<h5>Preferred Mode</h5>"
+  },
+  {
+   "fieldname": "travel_and_costs_section",
+   "fieldtype": "Section Break",
+   "label": "Travel and Costs"
+  },
+  {
+   "fieldname": "open_to_travel",
+   "fieldtype": "Select",
+   "label": "Open to travel",
+   "options": "Yes\nNo\nMaybe (for special events)",
+   "placeholder": "Choose an option",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.open_to_travel === \"Yes\" || doc.open_to_travel === \"Maybe (for special events)\"",
+   "fieldname": "can_self_fund_travel",
+   "fieldtype": "Select",
+   "label": "Can self fund travel?",
+   "options": "Yes, I / my company can cover my travel\nPartially, I can cover some costs\nNo, I would need support",
+   "placeholder": "Choose an option"
+  },
+  {
+   "fieldname": "column_break_swfb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_opej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_alignment_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "languages_spoken",
+   "fieldtype": "HTML",
+   "label": "Languages Spoken"
+  },
+  {
+   "depends_on": "eval:doc.other == \"1\"",
+   "fieldname": "other_languages",
+   "fieldtype": "Data",
+   "label": "Other Languages"
+  },
+  {
+   "fieldname": "why_mentor",
+   "fieldtype": "Small Text",
+   "label": "Why do you want to mentor Bodhya students?",
+   "reqd": 1
+  },
+  {
+   "default": "2",
+   "fieldname": "max_students",
+   "fieldtype": "Int",
+   "label": "Maximum number of students you can mentor at a time",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.open_to_travel === \"Yes\" || doc.open_to_travel === \"Maybe (for special events)\"",
+   "fieldname": "travel_notes",
+   "fieldtype": "Small Text",
+   "label": "Any constraints or preferences for travel?"
+  },
+  {
+   "fieldname": "program_alignment_section",
+   "fieldtype": "Section Break",
+   "label": "Program Alignment"
+  },
+  {
+   "fieldname": "github_profile",
+   "fieldtype": "Data",
+   "label": "Github Profile",
+   "placeholder": "URL"
+  },
+  {
+   "fieldname": "linkedin_profile",
+   "fieldtype": "Data",
+   "label": "Linkedin Profile",
+   "placeholder": "URL"
+  },
+  {
+   "default": "8",
+   "fieldname": "hours_per_month",
+   "fieldtype": "Int",
+   "label": "How many hours can you realistically dedicate per month?",
+   "non_negative": 1,
+   "placeholder": "Typical: 4-8 hours/month",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "web_development_pythondjango",
+   "fieldtype": "Check",
+   "label": "Web Development (Python/Django)"
+  },
+  {
+   "default": "0",
+   "fieldname": "web_development_jsnodereact",
+   "fieldtype": "Check",
+   "label": "Web Development (JS/Node/React)"
+  },
+  {
+   "default": "0",
+   "fieldname": "frappeerpnext",
+   "fieldtype": "Check",
+   "label": "Frappe/ERPNext"
+  },
+  {
+   "default": "0",
+   "fieldname": "devops__cloud_aws",
+   "fieldtype": "Check",
+   "label": "DevOps / Cloud (AWS)"
+  },
+  {
+   "default": "0",
+   "fieldname": "data__ml",
+   "fieldtype": "Check",
+   "label": "Data / ML"
+  },
+  {
+   "default": "0",
+   "fieldname": "open_source_contribution",
+   "fieldtype": "Check",
+   "label": "Open Source Contribution"
+  },
+  {
+   "default": "0",
+   "fieldname": "career_guidance__resume__interviews",
+   "fieldtype": "Check",
+   "label": "Career Guidance / Resume / Interviews"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_specify_below",
+   "fieldtype": "Check",
+   "label": "Other (specify below)"
+  },
+  {
+   "fieldname": "primary_skills",
+   "fieldtype": "HTML",
+   "label": "Primary Skills",
+   "options": "<h5>Primary Skills</h5>"
+  },
+  {
+   "default": "0",
+   "fieldname": "online_video",
+   "fieldtype": "Check",
+   "label": "Online (video)"
+  },
+  {
+   "default": "0",
+   "fieldname": "online_async__chat",
+   "fieldtype": "Check",
+   "label": "Online (async / chat)"
+  },
+  {
+   "default": "0",
+   "fieldname": "in_person",
+   "fieldtype": "Check",
+   "label": "Offline (in person)"
+  },
+  {
+   "default": "0",
+   "fieldname": "weekdays_evenings",
+   "fieldtype": "Check",
+   "label": "Weekdays (evenings)"
+  },
+  {
+   "default": "0",
+   "fieldname": "saturdays",
+   "fieldtype": "Check",
+   "label": "Saturdays"
+  },
+  {
+   "default": "0",
+   "fieldname": "sundays",
+   "fieldtype": "Check",
+   "label": "Sundays"
+  },
+  {
+   "default": "0",
+   "fieldname": "flexible",
+   "fieldtype": "Check",
+   "label": "Flexible"
+  },
+  {
+   "default": "0",
+   "fieldname": "hindi",
+   "fieldtype": "Check",
+   "label": "Hindi"
+  },
+  {
+   "default": "0",
+   "fieldname": "english",
+   "fieldtype": "Check",
+   "label": "English"
+  },
+  {
+   "default": "0",
+   "fieldname": "maithili",
+   "fieldtype": "Check",
+   "label": "Maithili"
+  },
+  {
+   "default": "0",
+   "fieldname": "bhojpuri",
+   "fieldtype": "Check",
+   "label": "Bhojpuri"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-30 12:41:16.195575",
+ "modified_by": "Administrator",
+ "module": "Bodhya Mentor Matchmaking",
+ "name": "Bodhya Mentors",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
