@@ -98,6 +98,14 @@ jobs:
         env:
           CI: 'Yes'
 
+      - name: Switch to Develop
+        run: |
+          cd frappe-bench
+          bench switch-to-develop --bench
+          bench switch-to-develop
+          bench update --patch
+          bench migrate
+
       - name: Run Tests
         working-directory: /home/runner/frappe-bench
         run: |
