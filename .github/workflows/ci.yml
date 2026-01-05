@@ -82,7 +82,7 @@ jobs:
 
       - name: Setup
         run: |
-          pip install "frappe-bench==5.25.1"
+          pip install "frappe-bench"
           bench init --frappe-branch version-15 --skip-redis-config-generation --skip-assets --python "$(which python)" ~/frappe-bench
           mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "SET GLOBAL character_set_server = 'utf8mb4'"
           mariadb --host 127.0.0.1 --port 3306 -u root -proot -e "SET GLOBAL collation_server = 'utf8mb4_unicode_ci'"
@@ -97,14 +97,6 @@ jobs:
           bench build
         env:
           CI: 'Yes'
-
-      - name: Switch to Develop
-        run: |
-          cd frappe-bench
-          bench switch-to-develop --bench
-          bench switch-to-develop
-          bench update --patch
-          bench migrate
 
       - name: Run Tests
         working-directory: /home/runner/frappe-bench
