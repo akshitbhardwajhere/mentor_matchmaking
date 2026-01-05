@@ -1,7 +1,7 @@
 # Copyright (c) 2025, Akshit Bhardwaj and Contributors
 # See license.txt
 
-# import frappe
+import frappe
 from frappe.tests import IntegrationTestCase
 
 
