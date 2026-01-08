@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 1,
+  "api_method": "check_github_activity",
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-01-08 20:39:16.873183",
+  "module": "Bodhya Mentor Matchmaking",
+  "name": "check_github_activity",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": null,
+  "script": "# Get the profile safely from form_dict\ngithub_user = frappe.form_dict.get(\"github_profile\")\nredirect_url = \"/learning-guideline\"\n\nif github_user:\n    try:\n        # Use + for string building as .format is blocked in your environment\n        url = \"https://api.github.com/users/\" + str(github_user) + \"/events/public\"\n        \n        # Fetch data using the built-in allowed method\n        events = frappe.make_get_request(url)\n        \n        # Check if we got a list of events\n        if events and isinstance(events, list):\n            now = frappe.utils.now_datetime()\n            recent_activity = False\n            \n            # Look at recent events\n            for e in events[:10]:\n                if e.get('type') == 'PushEvent':\n                    # Parse date safely\n                    created_at = frappe.utils.get_datetime(e.get('created_at'))\n                    \n                    # Use date_diff (returns difference in days)\n                    if frappe.utils.date_diff(now, created_at) < 30:\n                        recent_activity = True\n                        break\n            \n            if recent_activity:\n                redirect_url = \"/bodhya-mentors\"\n                \n    except Exception:\n        # We can't use get_traceback, so we just log a simple message\n        frappe.log_error(\"GitHub API call failed for user: \" + str(github_user))\n        redirect_url = \"/learning-guideline\"\n\n# Return the message to the Client Script\nfrappe.response[\"message\"] = redirect_url",
+  "script_type": "API"
+ }
+]

@@ -5,6 +5,10 @@ app_description = "Mentor matchmaking for students who are willing to lear"
 app_email = "akshitbhardwaj257448@gmail.com"
 app_license = "mit"
 
+fixtures= [
+    {"doctype": "Server Script"}
+]
+
 # Apps
 # ------------------
 
