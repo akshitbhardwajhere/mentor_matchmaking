@@ -7,7 +7,7 @@
  "allow_print": 0,
  "anonymous": 0,
  "apply_document_permissions": 0,
- "breadcrumbs": "[\n  {\"label\": _(\"Home\"), \"route\": \"/\"},\n  {\"label\": _(\"Mentor Registration\"), \"route\": \"/mentor-registration\"}\n]\n",
+ "breadcrumbs": "[\n  {\"label\": _(\"Home\"), \"route\": \"/\"},\n  {\"label\": _(\"Mentors\"), \"route\": \"/mentor-registration\"}\n]\n",
  "button_label": "Register",
  "client_script": "",
  "condition_json": "[]",
@@ -42,10 +42,10 @@
    "label": "Years of experience in tech"
   }
  ],
- "list_title": "Mentors",
+ "list_title": "Bodhya Mentors",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2026-01-12 21:42:43.376714",
+ "modified": "2026-01-12 21:54:42.201872",
  "modified_by": "Administrator",
  "module": "Bodhya Mentor Matchmaking",
  "name": "register-as-a-bodhya-mentor",
