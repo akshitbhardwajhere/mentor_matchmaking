@@ -1,12 +1,13 @@
 {
  "allow_comments": 0,
  "allow_delete": 0,
- "allow_edit": 0,
+ "allow_edit": 1,
  "allow_incomplete": 0,
- "allow_multiple": 0,
+ "allow_multiple": 1,
  "allow_print": 0,
  "anonymous": 0,
  "apply_document_permissions": 0,
+ "breadcrumbs": "[\n  {\"label\": _(\"Home\"), \"route\": \"/\"},\n  {\"label\": _(\"Mentor Registration\"), \"route\": \"/mentor-registration\"}\n]\n",
  "button_label": "Register",
  "client_script": "",
  "condition_json": "[]",
@@ -18,20 +19,43 @@
  "hide_navbar": 0,
  "idx": 0,
  "is_standard": 1,
- "list_columns": [],
+ "list_columns": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "years_of_experience_in_tech",
+   "fieldtype": "Int",
+   "label": "Years of experience in tech"
+  }
+ ],
+ "list_title": "Mentors",
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2025-12-30 10:14:42.406532",
+ "modified": "2026-01-12 21:42:43.376714",
  "modified_by": "Administrator",
  "module": "Bodhya Mentor Matchmaking",
  "name": "register-as-a-bodhya-mentor",
  "owner": "Administrator",
  "published": 1,
- "route": "register-as-a-bodhya-mentor",
+ "route": "mentor-registration",
  "show_attachments": 0,
- "show_list": 0,
+ "show_list": 1,
  "show_sidebar": 0,
- "title": "Register as a Bodhya Mentor",
+ "title": "Mentor Registration",
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
