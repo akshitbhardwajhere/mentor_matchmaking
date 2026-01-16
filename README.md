@@ -1,3 +1,4 @@
+<a href="https://bodhya.net"><img src="/public/bodhya-badge.svg" align="right" alt="Bodhya Badge" height="40px"/></a>
 ### Bodhya Mentor Matchmaking
 
 Mentor matchmaking for students who are willing to lear
